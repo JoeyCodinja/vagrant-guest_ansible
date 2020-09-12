@@ -34,7 +34,7 @@ if ! command -v ansible >/dev/null; then
         sudo pip install setuptools --no-use-wheel --upgrade
         echo "Installing required python modules."
         sudo pip install paramiko pyyaml jinja2 markupsafe
-        sudo pip install ansible
+        sudo pip install ansible --no-cache-dir
 fi
 
 if [ ! -z "$ANSIBLE_EXTRA_VARS" -a "$ANSIBLE_EXTRA_VARS" != " " ]; then
